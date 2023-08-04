@@ -1,38 +1,30 @@
-# 18: Instalação Linux
+# 16: Instalação Windows
 
-Se você usa Linux, terá uma facilidade maior, já que está acostumado a trabalhar com o terminal.
+Nesta aula, vamos realizar a instalação do Docker em um ambiente Windows. Siga os passos abaixo para realizar a instalação:
 
-## Passos para instalação do Docker no Linux:
+1. Acesse o site oficial do Docker e selecione a opção "Get Docker" e depois escolha "Windows".
 
-1. Primeiro, faça um update e garanta que tudo esteja atualizado:
+2. Se você tiver as últimas atualizações do Windows 10 e possuir o "Windows Subsystem for Linux (WSL)", selecione a opção "Get Docker" disponível nessa página. Essa é a opção correta para usuários com a versão mais recente do Windows 10.
 
-   ``` sudo apt-get update ```
-   ``` sudo dpkg --add-architecture amd64 ```
-   ``` sudo apt-get update ```
+3. Caso você tenha uma versão do Windows 10 desatualizada ou esteja usando o Windows 8 ou 7, escolha a opção "Docker Desktop for Windows" para fazer o download. Essa versão também está disponível para Mac.
 
-2. Em seguida, adicione o repositório do Docker:
+4. Após o download, execute o instalador do Docker. Você pode encontrar janelas de segurança do Windows pedindo permissão para prosseguir com a instalação. Aceite para continuar.
 
-   ``` sudo apt-get install apt-transport-https ca-certificates curl software-properties-common ```
-   ``` curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg ```
-   ``` echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null ```
+5. Leia e concorde com o contrato de licença.
 
-3. Novamente, atualize o repositório após a adição do Docker:
+6. O instalador irá prosseguir com o processo de instalação. Durante a instalação, pode ser necessário reiniciar a máquina para que o Docker possa aplicar os privilégios necessários.
 
-   ``` sudo apt-get update ```
-
-4. Finalmente, execute o comando de instalação do Docker:
-
-   ``` sudo apt-get install docker-ce ```
-
-   Durante a instalação, quando solicitado, digite Y ou S para confirmar.
-
-5. Verifique se o Docker foi instalado corretamente:
+7. Depois da instalação, verifique se o Docker foi instalado corretamente usando o seguinte comando:
 
    ``` docker --version ```
 
-   Após a instalação, você verá a versão do Docker instalada no seu sistema.
+   Essa ação exibirá a versão do Docker instalada no seu sistema.
 
-Pronto! A instalação do Docker em ambiente Linux foi concluída com sucesso. Agora você tem o Docker instalado e pronto para uso.
+8. Após a instalação, o Docker estará pronto para uso. Você pode abrir o terminal do Docker clicando no ícone correspondente.
 
-Em caso de dúvidas, você pode consultar a documentação oficial do Docker ou procurar por tutoriais específicos para a sua distribuição Linux.
+9. Caso você tenha instalado o Docker Desktop for Windows em versões mais antigas do Windows, ele criará uma máquina virtual usando o VirtualBox. O terminal do Docker estará disponível através de um ícone específico para essa instalação.
+
+Lembre-se de que, se tiver qualquer dúvida ou problema durante a instalação, você pode consultar o Fórum do curso para obter ajuda e suporte.
+
+Independentemente da versão do Windows que você estiver usando, as instruções acima irão guiá-lo através do processo de instalação do Docker com sucesso.
 
