@@ -7,16 +7,16 @@ Nesta seção, abordaremos como executar contêineres em segundo plano, no modo 
 Para iniciar um contêiner em segundo plano, use o seguinte comando Docker:
 
 ```
-|---|
-|docker container run -d|
+docker container run -d
+```
 
 - `-d`: Este sinalizador indica que você deseja que o contêiner seja executado em segundo plano, no modo "daemon".
 
 Por exemplo, para criar um contêiner chamado "exercicio_fisico" mapeando a porta 8080 para a porta 80 interna e montando um volume, você pode usar o seguinte comando:
 
 ```
-|---|
-|docker container run -d -p 8080:80 -v $(pwd)/ExercicioVolume:/var/www/html apache|
+docker container run -d -p 8080:80 -v $(pwd)/ExercicioVolume:/var/www/html apache
+```
 
 Neste comando:
 - `-d`: Inicia o contêiner em segundo plano.
@@ -29,14 +29,14 @@ Com isso, o contêiner Apache será executado em segundo plano, pronto para serv
 Para listar contêineres em execução, use:
 
 ```
-|---|
-|docker ps|
+docker ps
+```
 
 Para parar um contêiner em execução, use:
 
 ```
-|---|
-|docker stop NOME_DO_CONTÊINER|
+docker stop NOME_DO_CONTÊINER
+```
 
 Lembre-se de que o modo "daemon" é ideal para ambientes de produção, onde você deseja que os contêineres funcionem como processos em segundo plano, interagindo entre si para fornecer serviços complexos. O Docker oferece flexibilidade e eficiência, mesmo quando você não está criando suas próprias imagens, como vimos nestes exemplos.
 
